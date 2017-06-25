@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>LOGIN PAGE</title>
+<style>
+h2{
+    text-align: center;
+}
+
+p.date {
+    text-align: right;
+}
+
+p.main {
+    text-align: justify;
+    }
+</style>
+</head>
+<body background="file:///Users/vimarshdubey/eclipse/jee-neon2/Eclipse.app/Contents/Eclipse/form/images/img1.jpg">
+<h2><big><b><text color="purple">LOGIN PAGE</b></big></h2>
+
+<form name="myForm" method="post" action="login" onsubmit="return validateForm()" >
+        <center>
+        <br>
+        <h3><big>User ID: </big><input type="text" name="id" style="width: 260px; height: 22px"/><br/>
+        <br>
+        <b><big>Password:<input type="password" name="pass" style="width: 267px; height: 23px"></big></b><br/><br>
+        <input type="submit" value="LOGIN" style="width: 245px; height: 38px"/>
+</center>        
+        </form>
+        
+        <script type="text/javascript" >
+        function validateForm() {
+            var x = document.forms["myForm"]["id"].value;
+            var y = document.forms["myForm"]["pass"].value;
+            
+            if (x === "" || y=== "") {
+                alert("Name or Password not filled");
+                
+                return false;
+            }
+        }
+        </script>
+</body>
+</html>

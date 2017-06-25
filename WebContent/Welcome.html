@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Welcome Page</title>
+<style>div.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+div.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}</style>
+</head>
+<body><br>
+<center><h2>BANK MENU</h2></center>
+<div id="topBar">
+    <a href ="http://localhost:8080/form/index.html" id="load_home"> <img src="file:///Users/vimarshdubey/eclipse/jee-neon2/Eclipse.app/Contents/Eclipse/form/images/home.png"> </a>
+</div>
+<div id ="content">        
+</div>
+
+<script>
+$(document).ready( function() {
+    $("#load_home").on("click", function() {
+        $("#content").load("content.html");
+    });
+});
+</script>
+<div class="tab">
+  <button class="tablinks" onclick="window.location.href='http://localhost:8080/form/Balance.html';">BALANCE</button>
+  <button class="tablinks" onclick="window.location.href='http://localhost:8080/form/Deposit.html';">DEPOSIT</button>
+ <button class="tablinks" onclick="window.location.href='http://localhost:8080/form/withdraw.html';">WITHDRAW</button>
+ <button class="tablinks" onclick="window.location.href='http://localhost:8080/form/transfer.html';">TRANSFER</button>
+ <button class="tablinks" onclick="window.location.href='http://localhost:8080/form/changePassword.html';">CHANGE PASSWORD</button>
+ <button class="tablinks" onclick="window.location.href='http://localhost:8080/form/deleteUser.html';">DELETE ACCOUNT</button>
+</div>
+
+</body>
+</html>
